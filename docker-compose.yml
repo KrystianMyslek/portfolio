@@ -1,0 +1,9 @@
+services:
+
+  portfolio:
+    container_name: portfolio
+    image: ubuntu/apache2:latest
+    volumes:
+      - ./portfolio:/var/www/html
+    ports:
+      - 8000:80
