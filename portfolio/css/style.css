@@ -1,0 +1,12 @@
+body {
+    font-family: "Sono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "MONO" 1;
+
+    height: 100vh;
+    width: 100%;
+    background-image: radial-gradient(circle farthest-side at var(--cursor_x_position) var(--cursor_y_position), oklch(37.9% 0.146 265.522), transparent 80%);
+}

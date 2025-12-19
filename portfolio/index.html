@@ -1,25 +1,114 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" >
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Sono:wght,MONO@200..800,1&display=swap" rel="stylesheet">
         <script src="js/jquery.js"></script>
         <script src="js/tailwind.js"></script>
-        <title>KRYSTIAN MYSŁEK PORTFOLIO</title>
+        <link  rel="stylesheet" href="css/style.css">
+        <style type="text/tailwindcss" >
+            body {
+                @apply text-gray-50;
+            }
+
+            #menu {
+                @apply text-xl mt-8;
+            }
+
+            #menu li.active .line { 
+                @apply w-14 bg-gray-50;
+            }
+
+            #menu li.active a {
+                @apply text-gray-50;
+            }
+
+            #menu li a {
+                @apply flex items-center py-3 text-gray-400 cursor-pointer;
+            }
+            
+            #menu li .line {
+                @apply mr-4 h-[2px] w-8 bg-gray-400 transition-all duration-[.5s];
+            }
+
+            #menu li:hover a {
+                @apply text-gray-50;
+            }
+
+            #menu li:hover .line {
+                @apply w-14 bg-gray-50 transition-all duration-[.5s];
+            }
+        </style>
+        <title>Krystian Mysłek Portfolio</title>
     </head>
-    <body>
-        <h1>
-            Krystian Mysłek
-        </h1>
-        <h2>
-            Web Developer
-        </h2>
+    <body class="bg-blue-950" >
+        <div class="md:grid grid-flow-col grid-cols-5 fixed overflow-y-auto">
+
+            <div class="col-span-2 pt-16 px-[100px] md:pl-[300px] md:pr-0">
+                <div id="title flex flex-col">
+                    <div class="p-6 px-0 text-7xl font-bold">
+                        Krystian Mysłek
+                    </div>
+                    <div class="p-4 px-0 text-3xl">
+                        Fullstack Web Developer
+                    </div>
+                </div>
+                <ul id="menu" class="p-4 pl-0 hidden md:block">
+                    <li id="menu_about" class="active" onclick="menuClick($(this))">
+                        <a href="#about">
+                            <span class="line"></span>
+                            <span>O mnie</span>
+                        </a>
+                    </li>
+                    <li id="menu_projects" onclick="menuClick($(this))">
+                        <a href="#projects">
+                            <span class="line"></span>
+                            <span>Projekty</span>
+                        </a>
+                    </li>
+                    <li id="menu_experience" onclick="menuClick($(this))">
+                        <a href="#experience">
+                            <span class="line"></span>
+                            <span>Doświadczenie</span>
+                        </a>
+                    </li>
+                    <li id="menu_contact" onclick="menuClick($(this))">
+                        <a href="#contact">
+                            <span class="line"></span>
+                            <span>Kontakt</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="content" >
+                <section id="about" class="pt-16 mb-14" >
+                    
+                </section>
+                <section id="projects" class="pt-16">
+   
+                </section>
+                <section id="experience" class="pt-16">
+
+                </section>
+                <section id="contact" class="pt-16">
+
+                </section>
+            </div>
+        </div>
     </body>
 
     <script>
-        $( document ).ready(function() {
-            
+         $( document ).ready(function() {
+            var r = document.querySelector(':root');
+
+            $("body").mousemove(function(e){
+                const {clientY, clientX} = e;
+
+                r.style.setProperty('--cursor_y_position', clientY + "px");
+                r.style.setProperty('--cursor_x_position', clientX + "px");
+            });
         });
     </script>
 </html>
