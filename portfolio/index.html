@@ -6,7 +6,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Sono:wght,MONO@200..800,1&display=swap" rel="stylesheet">
         <script src="js/jquery.js"></script>
         <script src="js/tailwind.js"></script>
-        <link  rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.css">
         <style type="text/tailwindcss" >
             body {
                 @apply text-gray-50;
@@ -39,6 +39,7 @@
             #menu li:hover .line {
                 @apply w-14 bg-gray-50 transition-all duration-[.5s];
             }
+
         </style>
         <title>Krystian Mysłek Portfolio</title>
     </head>
@@ -82,25 +83,84 @@
                 </ul>
             </div>
 
-            <div id="content" >
-                <section id="about" class="pt-16 mb-14" >
-                    
+            <div id="content" class="col-span-3 pl-[100px] pr-[100px] md:pr-[300px] h-screen md:overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-blue-950 [&::-webkit-scrollbar-thumb]:bg-gray-50">
+                <section id="about" class="pt-16 mb-14 text-justify" >
+                    Od 2018 r. pracuję na stanowisku Full Stack Developer, wykorzystując na co dzień technologie takie jak mi.in.: PHP (Symfony, Phalcon, Laravel), JavaScript (JQuery), React, mySQL oraz PosgreSQL. Moje doświadczenie zawodowe obejmuje projektowanie i rozwój aplikacji webowych od warstwy serwerowej, po interfejs użytkownika, optymalizację wydajności aplikacji oraz refaktoryzację istniejącego kodu czy tworzenie i integrację REST API z zewnętrznymi systemami.
+                    Cenię sobie pracę zespołową i dobry kontakt z klientem, to pozwala mi skutecznie dbać o wydajność i bezpieczeństwo tworzonych rozwiązań, jednak potrafię także przejąć pełną odpowiedzialność za powierzone mi zadania, pracując samodzielnie. Jestem nastawiony na ciągły rozwój. Regularnie śledzę nowe trendy technologiczne, starając się wdrażać je w praktyce.
+                    Chciałbym zdobywać dalsze doświadczenia zawodowe, nowe umiejętności i kompetencje.
                 </section>
                 <section id="projects" class="pt-16">
-   
+                   
                 </section>
-                <section id="experience" class="pt-16">
-
+                <section id="experience" class="pt-16 text-justify">
+                    W pracy, tak na co dzień miałem do czynienia z dwoma kluczowymi projektami. W obu przypadkach mowa o systemach ERP. Jeden dość prosty, ale zawierał wszystkie niezbędne elementy do pracy w drukarni. System był stworzony w PHP na framework Symfony, lecz dość znacznie zmodyfikowany przez nasz zespół by lepiej pasował do naszych potrzeb. Drugi system, z którym miałem do czynienia, był znacznie bardziej rozwinięty. Główny system wspomagał pracę w salonach usług telekomunikacyjnych jak np. Play czy Orange, lecz na rynku niemieckim. System ten wspierał prace zarówno z klientem docelowym przy podpisywaniu umów, sprzedaży ubezpieczeń jak i pomagał kierownikom przy zarządzaniu planem pracy, wynagrodzeniami i wszelakimi aspektami administracyjnymi. Ten system podobnie jak uprzedni został stworzony w PHP na Symfony i tutaj także został on mocno zmodyfikowany. Przy tym projekcie to nie koniec, bo do tego systemu stworzyliśmy system pomocniczy. Posiadał on wiele funkcji, ale głównym jego zadaniem była kontrola instancji głównego systemu. Został on stworzony także w PHP, lecz na framework Phalcon. Tutaj potrzebowaliśmy czegoś lekkiego i szybkiego. Aby w życiu nie było za lekko, niektórzy klienci zażyczyli sobie by ich instancja była odcięta od internetu, jednak chcąc by system do zarządzania wciąż działał stworzyliśmy oprogramowanie do komunikacji między nimi. Nie wchodząc już w szczegóły techniczne to oprogramowanie zostało stworzone w Node.js w języku TypeScript. Powstała nawet aplikacja mobilna dla pracowników, głównie służyła do autoryzowania logowania w systemie, ale miała także dodatkowe funkcje jak przeglądanie planu pracy. Aplikacja powstawała przy użyciu oprogramowania Cordova.
+                    Przez to że nasz zespół był na prawdę mały (5 osób) to nie było mowy o wybieraniu projektów pod siebie, dzięki temu miałem kontakt z wieloma róznymi technologiami co pozwala utrzymać otwarty umysł :)
                 </section>
                 <section id="contact" class="pt-16">
-
+                    
                 </section>
+                <div class="footer py-[120px] text-gray-400">
+                    Zaprojektowane w mojej głowie :) zaprogramowane w 
+                    <a class="text-white hover-underline-animation" href="https://code.visualstudio.com/">Visual Studio Code</a>.
+                    Zbudowane w HTML5 z <a class="text-white hover-underline-animation" href="https://tailwindcss.com/">Tailwind CSS</a>
+                    i 
+                    <a class="text-white hover-underline-animation" href="https://jquery.com/">jQuery</a>,
+                    wdrożony na VPS od
+                    <a class="text-white hover-underline-animation" href="/www.ovhcloud.com">OVH</a>.
+                </div>
             </div>
         </div>
     </body>
 
     <script>
-         $( document ).ready(function() {
+
+        function menuClick(_this) {
+            $('#menu li').removeClass('active');
+            _this.addClass('active');
+        }
+
+        $( document ).ready(function() {
+
+            var prev_scroll_pos = 0;
+            $("#content").on("scroll", function() {
+                var scroll_pos = $("#content").scrollTop();
+                var up = (prev_scroll_pos < scroll_pos) ? true : false;
+                prev_scroll_pos = scroll_pos;
+
+                if (up) {
+                    var x = scroll_pos;
+                    switch(true) {
+                        case (x >= 1300):
+                            $("#menu_contact").trigger('click');
+                            break;
+                        case (x >= 800):
+                            $("#menu_experience").trigger('click');
+                            break;
+                        case (x >= 400):
+                            $("#menu_projects").trigger('click');
+                            break;
+                        default:
+                            break;
+                    }
+                } else {
+                    var x = scroll_pos;
+                    switch(true) {
+                        case (x <= 300):
+                            $("#menu_about").trigger('click');
+                            break;
+                        case (x <= 900):
+                            $("#menu_projects").trigger('click');
+                            break;
+                        case (x <= 1200):
+                            $("#menu_experience").trigger('click');
+                            break;
+                        default:
+                            break;
+                    }
+
+                }
+            });
+            
             var r = document.querySelector(':root');
 
             $("body").mousemove(function(e){
@@ -109,6 +169,7 @@
                 r.style.setProperty('--cursor_y_position', clientY + "px");
                 r.style.setProperty('--cursor_x_position', clientX + "px");
             });
+
         });
     </script>
 </html>

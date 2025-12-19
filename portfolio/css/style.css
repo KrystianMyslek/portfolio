@@ -10,3 +10,31 @@ body {
     width: 100%;
     background-image: radial-gradient(circle farthest-side at var(--cursor_x_position) var(--cursor_y_position), oklch(37.9% 0.146 265.522), transparent 80%);
 }
+
+.nav-indicator {
+  width: 4rem;
+  background-color: rgb(226 232 240);
+}
+
+.hover-underline-animation {
+  position: relative;
+  cursor: pointer;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transition: transform 0.25s ease-out;
+  transform-origin: bottom right;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
