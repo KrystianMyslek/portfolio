@@ -11,11 +11,6 @@ body {
     background-image: radial-gradient(circle farthest-side at var(--cursor_x_position) var(--cursor_y_position), oklch(37.9% 0.146 265.522), transparent 80%);
 }
 
-.nav-indicator {
-  width: 4rem;
-  background-color: rgb(226 232 240);
-}
-
 .hover-underline-animation {
   position: relative;
   cursor: pointer;
