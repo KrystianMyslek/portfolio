@@ -8,12 +8,18 @@
     require 'PHPMailer/SMTP.php';
 
     $mail = new PHPMailer(true);
+    $env_file_path = "server/.env";
 
-    if (!file_exists(".env")) {
+    if (!file_exists($env_file_path)) {
         echo "No config file !";
     } else {
     
-        $env = json_decode(file_get_contents(".env"), true);
+        $env = json_decode(file_get_contents($env_file_path), true);
+
+        if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['message'])) {
+            echo "Incomplete data !";
+            die();
+        }
 
         try {
             $mail->isSMTP();
@@ -42,5 +48,3 @@
 
     die();
 ?>
-
-

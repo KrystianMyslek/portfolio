@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+#menu {
+  @apply text-xl mt-8;
+}
+
+#menu li.active .line { 
+  @apply w-14 bg-gray-50;
+}
+
+#menu li.active a {
+  @apply text-gray-50;
+}
+
+#menu li a {
+  @apply flex items-center py-3 text-gray-400 cursor-pointer;
+}
+
+#menu li .line {
+  @apply mr-4 h-0.5 w-8 bg-gray-400 transition-all duration-500;
+}
+
+#menu li:hover a {
+  @apply text-gray-50;
+}
+
+#menu li:hover .line {
+  @apply w-14 bg-gray-50 transition-all duration-500;
+}
+
+#projects li {
+  @apply rounded-sm hover:opacity-100! my-4 p-6;
+}
+
+#projects a {
+  @apply grow w-1/2 px-4;
+}
+
+#projects button {
+  @apply mt-4 w-full rounded-md border hover:bg-white/10 shadow-xs px-4 py-2.5 cursor-pointer flex justify-center items-center;
+}
+
+body {
+  font-family: "Sono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "MONO" 1;
+
+  height: 100vh;
+  width: 100%;
+  background-image: radial-gradient(circle farthest-side at var(--cursor_x_position) var(--cursor_y_position), oklch(37.9% 0.146 265.522), transparent 80%);
+}
+
+.hover-underline-animation {
+  position: relative;
+  cursor: pointer;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #0087ca;
+  transition: transform 0.25s ease-out;
+  transform-origin: bottom right;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

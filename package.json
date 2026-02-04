@@ -1,0 +1,21 @@
+{
+  "name": "vitefolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@rollup/plugin-inject": "^5.0.5",
+    "vite": "^7.2.4"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "jquery": "^4.0.0",
+    "tailwindcss": "^4.1.18",
+    "vite-plugin-php": "^2.0.4"
+  }
+}
