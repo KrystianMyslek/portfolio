@@ -29,14 +29,24 @@
 }
 
 #projects li {
-  @apply rounded-sm hover:opacity-100! my-4 p-6;
+  @apply bg-white/5 outline-1 rounded-md text-white md:hover:outline-1 -outline-offset-1 outline-white/10 p-6 my-4
+    hover:bg-white/5 hover:opacity-100!
+    md:bg-transparent md:outline-0  md:flex
+}
+
+#projects li > svg {
+  @apply m-auto w-30 md:min-w-40 md:w-40 mb-2;
+}
+
+#projects li > div {
+  @apply md:p-4 md:pl-8 grow flex flex-col justify-between;
 }
 
 #projects a {
-  @apply grow w-1/2 px-4;
+  @apply grow w-1/2;
 }
 
-#projects button {
+#projects a button {
   @apply mt-4 w-full rounded-md border hover:bg-white/10 shadow-xs px-4 py-2.5 cursor-pointer flex justify-center items-center;
 }
 
