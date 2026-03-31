@@ -1,21 +1,28 @@
 {
-  "name": "vitefolio",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "@rollup/plugin-inject": "^5.0.5",
-    "vite": "^7.2.4"
-  },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.1.18",
-    "jquery": "^4.0.0",
-    "tailwindcss": "^4.1.18",
-    "vite-plugin-php": "^2.0.4"
-  }
+	"name": "portfolio",
+	"private": true,
+	"version": "1.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vue-tsc -b && vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"@tailwindcss/vite": "^4.2.2",
+		"axios": "^1.14.0",
+		"tailwindcss": "^4.2.2",
+		"vee-validate": "^4.15.1",
+		"vite-plugin-php": "^2.0.4",
+		"vue": "^3.5.30",
+		"yup": "^1.7.1"
+	},
+	"devDependencies": {
+		"@types/node": "^24.12.0",
+		"@vitejs/plugin-vue": "^6.0.5",
+		"@vue/tsconfig": "^0.9.0",
+		"typescript": "~5.9.3",
+		"vite": "^8.0.1",
+		"vue-tsc": "^3.2.5"
+	}
 }

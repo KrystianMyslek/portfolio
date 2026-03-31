@@ -1,25 +1,30 @@
 <?php 
+	header("Access-Control-Allow-Origin: *");
+	header("Access-Control-Allow-Headers: Content-Type");
+	header("Content-Type: application/json");
 
-    use PHPMailer\PHPMailer\PHPMailer;
-    use PHPMailer\PHPMailer\Exception;
-    
-    require 'PHPMailer/Exception.php';
-    require 'PHPMailer/PHPMailer.php';
-    require 'PHPMailer/SMTP.php';
+	use PHPMailer\PHPMailer\PHPMailer;
+	use PHPMailer\PHPMailer\Exception;
 
-    $mail = new PHPMailer(true);
-    $env_file_path = "server/.env";
+	require 'PHPMailer/Exception.php';
+	require 'PHPMailer/PHPMailer.php';
+	require 'PHPMailer/SMTP.php';
 
-    if (!file_exists($env_file_path)) {
-        echo "No config file !";
+	$mail = new PHPMailer(true);
+	$env_file_path = "server/.env";
+
+	if (!file_exists($env_file_path)) {
+		echo "No config file !";
     } else {
-    
-        $env = json_decode(file_get_contents($env_file_path), true);
+		$json = file_get_contents('php://input');
+		$data = json_decode($json, true);
 
-        if (empty($_POST['name']) || empty($_POST['email']) || empty($_POST['message'])) {
-            echo "Incomplete data !";
+        if (empty($data['name']) || empty($data['email']) || empty($data['message'])) {
+			echo "Incomplete data !";
             die();
-        }
+		}
+			
+		$env = json_decode(file_get_contents($env_file_path), true);
 
         try {
             $mail->isSMTP();
@@ -30,14 +35,14 @@
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
             $mail->Port = 465;
     
-            $mail->setFrom('krystian.myslek@gmail.com', 'OVH');
+            $mail->setFrom('krystian.myslek@gmail.com', 'krystianmyslek.com');
             $mail->addAddress('krystian.myslek@gmail.com');
     
             $mail->CharSet = 'UTF-8';
     
             $mail->isHTML(true);
-            $mail->Subject = "krystianmyslek.me " . $_POST['name'] . " zostawił wiadomość";
-            $mail->Body = $_POST['message'] . "<br/><br/>" . $_POST['email'];
+            $mail->Subject = $data['name'] . " zostawił wiadomość";
+            $mail->Body = $data['message'] . "<br/><br/>" . $data['email'];
     
             $mail->send();
             echo 'OK';

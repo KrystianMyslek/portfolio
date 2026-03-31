@@ -1,86 +1,111 @@
 @import "tailwindcss";
 
-#menu {
-  @apply text-xl mt-8;
+#page {
+	@apply text-gray-50 bg-blue-950 text-sm h-full grid-flow-col grid-cols-5 xl:grid xl:fixed overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-blue-950 [&::-webkit-scrollbar-thumb]:bg-gray-50;
+
+	background-image: radial-gradient(
+		circle farthest-side at var(--cursor_x_position) var(--cursor_y_position),
+		oklch(37.9% 0.146 265.522),
+		transparent 80%
+	);
+
+	height: 100vh;
+	width: 100%;
 }
 
-#menu li.active .line { 
-  @apply w-14 bg-gray-50;
+#content {
+	@apply col-span-3 px-5 xl:pr-75 h-screen xl:overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-blue-950 [&::-webkit-scrollbar-thumb]:bg-gray-50;
+}
+
+#menu {
+	@apply text-xl mt-8;
+}
+
+#menu li.active .line {
+	@apply w-14 bg-gray-50;
 }
 
 #menu li.active a {
-  @apply text-gray-50;
+	@apply text-gray-50;
 }
 
 #menu li a {
-  @apply flex items-center py-3 text-gray-400 cursor-pointer;
+	@apply flex items-center py-3 text-gray-400 cursor-pointer;
 }
 
 #menu li .line {
-  @apply mr-4 h-0.5 w-8 bg-gray-400 transition-all duration-500;
+	@apply mr-4 h-0.5 w-8 bg-gray-400 transition-all duration-500;
 }
 
 #menu li:hover a {
-  @apply text-gray-50;
+	@apply text-gray-50;
 }
 
 #menu li:hover .line {
-  @apply w-14 bg-gray-50 transition-all duration-500;
+	@apply w-14 bg-gray-50 transition-all duration-500;
+}
+
+section {
+	@apply pt-16;
+}
+
+#about,
+#experience {
+	@apply text-justify;
 }
 
 #projects li {
-  @apply bg-white/5 outline-1 rounded-md text-white md:hover:outline-1 -outline-offset-1 outline-white/10 p-6 my-4
+	@apply bg-white/5 outline-1 rounded-md text-white md:hover:outline-1 -outline-offset-1 outline-white/10 p-6 my-4
     hover:bg-white/5 hover:opacity-100!
-    md:bg-transparent md:outline-0  md:flex
+    md:bg-transparent md:outline-0  md:flex;
 }
 
 #projects li > svg {
-  @apply m-auto w-30 md:min-w-40 md:w-40 mb-2;
+	@apply m-auto w-30 md:min-w-40 md:w-40 mb-2;
 }
 
 #projects li > div {
-  @apply md:p-4 md:pl-8 grow flex flex-col justify-between;
+	@apply md:p-4 md:pl-8 grow flex flex-col justify-between;
 }
 
 #projects a {
-  @apply grow w-1/2;
+	@apply grow w-full;
 }
 
 #projects a button {
-  @apply mt-4 w-full rounded-md border hover:bg-white/10 shadow-xs px-4 py-2.5 cursor-pointer flex justify-center items-center;
+	@apply w-full rounded-md border hover:bg-white/10 shadow-xs px-4 py-2.5 cursor-pointer flex justify-center items-center;
 }
 
 body {
-  font-family: "Sono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "MONO" 1;
+	font-family: "Sono", monospace;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings: "MONO" 1;
 
-  height: 100vh;
-  width: 100%;
-  background-image: radial-gradient(circle farthest-side at var(--cursor_x_position) var(--cursor_y_position), oklch(37.9% 0.146 265.522), transparent 80%);
+	/* height: 100vh;
+	width: 100%; */
 }
 
 .hover-underline-animation {
-  position: relative;
-  cursor: pointer;
+	position: relative;
+	cursor: pointer;
 }
 
 .hover-underline-animation::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #0087ca;
-  transition: transform 0.25s ease-out;
-  transform-origin: bottom right;
+	content: "";
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #0087ca;
+	transition: transform 0.25s ease-out;
+	transform-origin: bottom right;
 }
 
 .hover-underline-animation:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
+	transform: scaleX(1);
+	transform-origin: bottom left;
 }
