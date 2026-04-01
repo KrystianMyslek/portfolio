@@ -25,7 +25,7 @@ const custom_popover_id = useId();
 		<component :is="svg[project.icon]" />
 		<div>
 			<div class="mb-4">
-				<h4 class="text-2xl w-full">
+				<h4 class="text-2xl w-full mb-2">
 					{{ project.name }}
 					<button
 						v-if="project.popover"
@@ -35,7 +35,7 @@ const custom_popover_id = useId();
 						{{ project.popover.title }}
 					</button>
 				</h4>
-				<p>{{ project.description }}</p>
+				<p>{{ $t(project.description) }}</p>
 			</div>
 
 			<div class="flex flex-col md:flex-row">
@@ -50,7 +50,7 @@ const custom_popover_id = useId();
 									fill="#000000"
 								/>
 							</svg>
-							<span class="ml-2">Platforma</span>
+							<span class="ml-2">{{ $t("projects.visit") }}</span>
 						</button>
 					</a>
 				</div>

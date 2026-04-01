@@ -5,7 +5,7 @@ import Project from "./project.vue";
 const projects: project[] = [
 	{
 		name: "IT Goodness Rank",
-		description: "Platforma do głosowania na ulubioną dobroć ze świata IT",
+		description: "projects.itgoodnessrank.description",
 		link: "https://itgoodnessrank.krystianmyslek.com/goodness/ranking",
 		github: "https://github.com/KrystianMyslek/itGoodnessRank",
 		icon: "symfony",
@@ -19,21 +19,21 @@ const projects: project[] = [
 	},
 	{
 		name: "Quick Quiz",
-		description: "Platforma do tworzenia i rozwiązywania quizów",
+		description: "projects.quickquiz.description",
 		link: "https://quickquiz.krystianmyslek.com/",
 		github: "https://github.com/KrystianMyslek/quickquiz",
 		icon: "laravel",
 	},
 	{
 		name: "Slide Puzzle",
-		description: "Klasyczna gra polegająca na ułożeniu obrazka z rozsypanych kafelków",
+		description: "projects.slidepuzzle.description",
 		link: "https://slidepuzzle.krystianmyslek.com/",
 		github: "https://github.com/KrystianMyslek/slidePuzzle",
 		icon: "react",
 	},
 	{
 		name: "PapperSoccer | IN PROGRESS",
-		description: "Gra strategiczna wzorowana na papierowej grze piłkarzyki z wykorzystaniem WebSocket",
+		description: "projects.papersoccer.description",
 		link: "https://papersoccer.krystianmyslek.com/",
 		github: "https://github.com/KrystianMyslek/paperSoccer_client",
 		github_2: "https://github.com/KrystianMyslek/paperSoccer_server",

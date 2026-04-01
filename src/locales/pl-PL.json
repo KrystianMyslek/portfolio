@@ -1,0 +1,51 @@
+{
+	"nav": {
+		"about": "O mnie",
+		"projects": "Projekty",
+		"experience": "Doświadczenie",
+		"contact": "Kontakt"
+	},
+	"about_me": "Od 2018 r. pracuję na stanowisku Full Stack Developer, wykorzystując na co dzień technologie takie jak mi.in.: PHP (Symfony, Phalcon, Laravel), JavaScript (JQuery), React, mySQL oraz PosgreSQL. Moje doświadczenie zawodowe obejmuje projektowanie i rozwój aplikacji webowych od warstwy serwerowej, po interfejs użytkownika, optymalizację wydajności aplikacji oraz refaktoryzację istniejącego kodu czy tworzenie i integrację REST API z zewnętrznymi systemami. Cenię sobie pracę zespołową i dobry kontakt z klientem, to pozwala mi skutecznie dbać o wydajność i bezpieczeństwo tworzonych rozwiązań, jednak potrafię także przejąć pełną odpowiedzialność za powierzone mi zadania, pracując samodzielnie. Jestem nastawiony na ciągły rozwój. Regularnie śledzę nowe trendy technologiczne, starając się wdrażać je w praktyce. Chciałbym zdobywać dalsze doświadczenia zawodowe, nowe umiejętności i kompetencje.",
+	"experience": "W pracy, tak na co dzień miałem do czynienia z dwoma kluczowymi projektami. W obu przypadkach mowa o systemach ERP. Jeden dość prosty, ale zawierał wszystkie niezbędne elementy do pracy wdrukarni. System był stworzony w PHP na framework Symfony, lecz dość znacznie zmodyfikowany przez nasz zespół by lepiej pasował do naszych potrzeb. Drugi system, z którym miałem do czynienia, był znacznie bardziej rozwinięty. Główny system wspomagał pracę w salonach usług telekomunikacyjnych jak np. Play czy Orange, lecz na rynku niemieckim. System ten wspierał prace zarówno z klientem docelowym przy podpisywaniu umów, sprzedaży ubezpieczeń jak i pomagał kierownikom przy zarządzaniu planem pracy, wynagrodzeniami i wszelakimi aspektami administracyjnymi. Ten system podobnie jak uprzedni został stworzony w PHP na Symfony i tutaj także został on mocno zmodyfikowany. Przy tym projekcie to nie koniec, bo do tego systemu stworzyliśmy system pomocniczy. Posiadał on wiele funkcji, ale głównym jego zadaniem była kontrola instancji głównego systemu. Został on stworzony także w PHP, lecz na framework Phalcon. Tutaj potrzebowaliśmy czegoś lekkiego i szybkiego. Aby w życiu nie było za lekko, niektórzy klienci zażyczyli sobie by ich instancja była odcięta od internetu, jednak chcąc by system do zarządzania wciąż działał stworzyliśmy oprogramowanie do komunikacji między nimi. Nie wchodząc już w szczegóły techniczne to oprogramowanie zostało stworzone w Node.js w języku TypeScript. Powstała nawet aplikacja mobilna dla pracowników, głównie służyła do autoryzowania logowania w systemie, ale miała także dodatkowe funkcje jak przeglądanie planu pracy. Aplikacja powstawała przy użyciu oprogramowania Cordova. Przez to że nasz zespół był na prawdę mały (5 osób) to nie było mowy o wybieraniu projektów pod siebie, dzięki temu miałem kontakt z wieloma róznymi technologiami co pozwala utrzymać otwarty umysł :)",
+	"contact": {
+		"text": "Napisz do mnie na adres email:",
+		"text2": "lub zostaw wiadomość tutaj :)",
+		"name": "Imię",
+		"email": "Adres Email",
+		"message": "Wiadomość",
+		"name_placeholder": "Imię",
+		"email_placeholder": "email",
+		"message_placeholder": "Treść wiadomości...",
+		"response": "Wiadomość została wysłana !",
+		"send": "Zostaw wiadomość"
+	},
+	"validation": {
+		"email_required": "Email jest wymagany",
+		"email_invalid": "Błędny format email",
+		"name_required": "Imię jest wymagane",
+		"name_too_short": "Imię: min. {min} znaki",
+		"message_required": "Wiadomość jest wymagana",
+		"message_too_short": "Treść wiadomości: min. {min} znaki"
+	},
+	"footer": {
+		"text": "Zaprojektowane w mojej głowie :) zaprogramowane w",
+		"text2": "Zbudowane z",
+		"text3": "i",
+		"text4": "wdrożony na"
+	},
+	"projects": {
+		"itgoodnessrank": {
+			"description": "Platforma do głosowania na ulubioną dobroć ze świata IT"
+		},
+		"quickquiz": {
+			"description": "Platforma do tworzenia i rozwiązywania quizów"
+		},
+		"slidepuzzle": {
+			"description": "Klasyczna gra polegająca na ułożeniu obrazka z rozsypanych kafelków"
+		},
+		"papersoccer": {
+			"description": "Gra strategiczna wzorowana na papierowej grze piłkarzyki z wykorzystaniem WebSocketów do rozgrywki w czasie rzeczywistym"
+		},
+		"visit": "Odwiedź stronę"
+	}
+}

@@ -11,7 +11,7 @@
 	require 'PHPMailer/SMTP.php';
 
 	$mail = new PHPMailer(true);
-	$env_file_path = "server/.env";
+	$env_file_path = "../.env";
 
 	if (!file_exists($env_file_path)) {
 		echo "No config file !";

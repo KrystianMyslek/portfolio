@@ -1,0 +1,51 @@
+{
+	"nav": {
+		"about": "About me",
+		"projects": "Projects",
+		"experience": "Experience",
+		"contact": "Contact"
+	},
+	"about_me": "Since 2018, I have been working as a Full Stack Developer, using technologies such as PHP (Symfony, Phalcon, Laravel), JavaScript (JQuery), React, mySQL and PosgreSQL on a daily basis. My professional experience includes designing and developing web applications from the server layer to the user interface, optimizing application performance, refactoring existing code, and creating and integrating REST APIs with external systems. I value teamwork and good communication with clients, which allows me to effectively ensure the performance and security of the solutions I create. However, I can also take full responsibility for the tasks entrusted to me while working independently. I am focused on continuous development. I regularly follow new technological trends and strive to implement them in practice. I would like to gain further professional experience, new skills, and competencies.",
+	"experience": "In my work, I have had experience with two key projects. In both cases, we are talking about ERP systems. One is quite simple but contains all the necessary elements for working in a printing house. The system was created in PHP on the Symfony framework but was significantly modified by our team to better suit our needs. The second system I had experience with was much more developed. The main system supported work in telecommunications service salons in the German market. This system supported work both with the target customer when signing contracts, selling insurance, and helped managers with managing work schedules, salaries, and all administrative aspects. This system, like the previous one, was created in PHP on Symfony and was also heavily modified. With this project, it doesn't end because we created an auxiliary system for this system. It had many functions, but its main task was to control the instances of the main system. It was also created in PHP but on the Phalcon framework. Here we needed something light and fast. To make life not too easy, some clients wanted their instance to be cut off from the internet, but wanting the management system to still work, we created software for communication between them. Without going into technical details, this software was created in Node.js in TypeScript language. There was even a mobile application for employees, mainly used to authorize logging into the system but also had additional functions such as viewing the work schedule. The application was developed using Cordova software. Because our team was really small (5 people), there was no way to choose projects for ourselves; thanks to this, I had contact with many different technologies which helps keep an open mind :)",
+	"contact": {
+		"text": "Write to me at the email address:",
+		"text2": "or leave a message here :)",
+		"name": "Name",
+		"email": "Email",
+		"message": "Message",
+		"name_placeholder": "name",
+		"email_placeholder": "email",
+		"message_placeholder": "Leave a message...",
+		"response": "Message has been sent !",
+		"send": "Leave a message"
+	},
+	"validation": {
+		"email_required": "Email is required",
+		"email_invalid": "Invalid email format",
+		"name_required": "Name is required",
+		"name_too_short": "Name: min. {min} characters",
+		"message_required": "Message is required",
+		"message_too_short": "Message content: min. {min} characters"
+	},
+	"footer": {
+		"text": "Designed in my head :) programmed in",
+		"text2": "Built with",
+		"text3": "and",
+		"text4": "deployed on"
+	},
+	"projects": {
+		"itgoodnessrank": {
+			"description": "A platform for voting for your favorite goodness from the IT world"
+		},
+		"quickquiz": {
+			"description": "A platform for creating and solving quizzes"
+		},
+		"slidepuzzle": {
+			"description": "A classic game that involves arranging a picture from scattered tiles"
+		},
+		"papersoccer": {
+			"description": "A strategic game based on the paper game of foosball using WebSockets for real-time gameplay"
+		},
+		"visit": "Visit page"
+	}
+}

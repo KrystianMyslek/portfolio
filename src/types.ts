@@ -1,3 +1,7 @@
+export const LANGUAGES = ["pl-PL", "en-US"] as const;
+
+export type langs = (typeof LANGUAGES)[number];
+
 export type icon = "symfony" | "laravel" | "react" | "angular";
 
 export type project = {
