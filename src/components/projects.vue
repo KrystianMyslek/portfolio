@@ -25,6 +25,13 @@ const projects: project[] = [
 		icon: "laravel",
 	},
 	{
+		name: "Cool Code Clue",
+		description: "projects.coolcodeclue.description",
+		link: "https://coolcodeclue.krystianmyslek.com/",
+		github: "https://github.com/KrystianMyslek/coolcodeclue",
+		icon: "nextjs",
+	},
+	{
 		name: "Slide Puzzle",
 		description: "projects.slidepuzzle.description",
 		link: "https://slidepuzzle.krystianmyslek.com/",

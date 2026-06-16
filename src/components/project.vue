@@ -3,6 +3,7 @@ import Symfony from "./svg/symfony.vue";
 import Laravel from "./svg/laravel.vue";
 import React from "./svg/react.vue";
 import Angular from "./svg/angular.vue";
+import Nextjs from "./svg/nextjs.vue";
 import type { project } from "../types";
 import { useId } from "vue";
 
@@ -15,6 +16,7 @@ const svg = {
 	laravel: Laravel,
 	react: React,
 	angular: Angular,
+	nextjs: Nextjs,
 };
 
 const custom_popover_id = useId();

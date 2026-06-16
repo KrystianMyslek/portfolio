@@ -40,6 +40,9 @@
 		"quickquiz": {
 			"description": "A platform for creating and solving quizzes"
 		},
+		"coolcodeclue": {
+			"description": "A platform with tips that will help you keep your code clean"
+		},
 		"slidepuzzle": {
 			"description": "A classic game that involves arranging a picture from scattered tiles"
 		},

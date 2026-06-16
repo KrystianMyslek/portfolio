@@ -40,6 +40,9 @@
 		"quickquiz": {
 			"description": "Platforma do tworzenia i rozwiązywania quizów"
 		},
+		"coolcodeclue": {
+			"description": "Platforma z podpowiedziami które pozwola zachować czysty kod"
+		},
 		"slidepuzzle": {
 			"description": "Klasyczna gra polegająca na ułożeniu obrazka z rozsypanych kafelków"
 		},

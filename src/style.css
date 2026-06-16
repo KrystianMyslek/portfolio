@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-html {
-	scroll-behavior: smooth;
-}
-
 #page {
 	@apply text-gray-50 bg-blue-950 text-sm h-full grid-flow-col grid-cols-5 xl:grid xl:fixed overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:rounded-full [&::-webkit-scrollbar-track]:bg-blue-950 [&::-webkit-scrollbar-thumb]:bg-gray-50;
 
@@ -18,7 +14,7 @@ html {
 }
 
 #nav .language {
-	@apply text-sm border rounded-md px-2 py-1 cursor-pointer transition-colors duration-300 mr-2;
+	@apply text-sm border rounded-md px-2 py-1 cursor-pointer transition-colors duration-300 mr-2 hover:bg-white/10;
 }
 
 #nav .language.active {
